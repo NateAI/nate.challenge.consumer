@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express, { Response } from 'express';
 
 const app = express();
@@ -23,8 +24,9 @@ const products = [
   }
 ];
 
+app.use(cors());
+
 app.get('/products', (_, res: Response) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
   res.send(products)
 });
 
