@@ -1,4 +1,4 @@
-test('renders learn react link', () => {
+test('is alive', () => {
   expect(true).toBe(true);
 });
 
