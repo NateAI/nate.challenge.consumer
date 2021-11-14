@@ -8,7 +8,7 @@ interface Product {
   discountCode: string;
 };
 
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:8080';
 const PRODUCTS_ENDPOINT = '/products';
 
 function App() {
