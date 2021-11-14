@@ -24,6 +24,7 @@ const products = [
 ];
 
 app.get('/products', (_, res: Response) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
   res.send(products)
 });
 

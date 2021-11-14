@@ -1,6 +1,35 @@
+import { useState, useEffect } from 'react';
 import { Container, Navbar, Table } from 'react-bootstrap';
 
+interface Product {
+  id: number;
+  productUrl: string;
+  productPrice: string;
+  discountCode: string;
+};
+
+const API_URL = 'http://localhost:3000';
+const PRODUCTS_ENDPOINT = '/products';
+
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await fetch(`${API_URL}${PRODUCTS_ENDPOINT}`);
+        const json = await result.json();
+
+        setProducts(json);
+      } catch (e) {
+        console.error(e);
+        setProducts([]);
+      }
+    };
+
+    fetchData();
+  }, [setProducts]);
+
   return (
     <div>
       <Navbar bg="dark" variant="dark" expand="lg">
@@ -19,12 +48,16 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>google.com</td>
-            <td>$7.99</td>
-            <td>FREE5FROMNATE</td>
-          </tr>
+          {
+            products.map((product: Product) => (
+              <tr key={product.id}>
+                <td>{product.id}</td>
+                <td>{product.productUrl}</td>
+                <td>{product.productPrice}</td>
+                <td>{product.discountCode}</td>
+              </tr>
+            ))
+          }
         </tbody>
       </Table>
     </div>
