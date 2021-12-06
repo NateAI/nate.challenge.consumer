@@ -19,7 +19,7 @@ const products = [
   {
     id: 3,
     productUrl: "apple.com",
-    productPrice: "$1000.00",
+    productPrice: "$800.00",
     discountCode: "GIVEME50"
   }
 ];
