@@ -5,10 +5,10 @@ export interface ProductMetadata {
 }
 
 const getRandomMetadata = (): ProductMetadata => {
-  const colors = ['red', 'blue', 'yellow', 'green', 'black'];
   const id = Math.floor(Math.random() * 100);
-  const priceCents = 100 + Math.floor(Math.random() * 10000);
+  const colors = ['red', 'blue', 'yellow', 'green', 'black'];
   const color = colors[Math.floor(Math.random() * 4)];
+  const priceCents = 100 + Math.floor(Math.random() * 10000);
 
   return {
     id,
