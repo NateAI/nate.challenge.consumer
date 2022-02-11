@@ -8,18 +8,18 @@ const products = [
   {
     id: 1,
     productUrl: "google.com",
-    productPrice: "$7.99",
+    productPrice: 799,
     discountCode: "FREE5FROMNATE"
   },
   {
     id: 2,
     productUrl: "facebook.com",
-    productPrice: "$34.88"
+    productPrice: 3488
   },
   {
     id: 3,
     productUrl: "apple.com",
-    productPrice: "$800.00",
+    productPrice: 80000,
     discountCode: "GIVEME50"
   }
 ];
