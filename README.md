@@ -14,7 +14,11 @@ The challenge is different for full-stack and backend candidates.
 ## Backend
 
 - Create a purchase product endpoint in the API
-- Use library function to fetch product metadata (options) & discounts for an item from URL
-    - In purchase request, include product ID and selected options
+- Use library functions to fetch product metadata (options) & discounts for an item from URL
+  - In purchase request, include product ID and selected options
 - Design a risk assessment flow with provided lib functions
+  - Assume that more than 1 missed payment should reject the purchase
+  - The balance should cover the cost of the product and reject otherwise
+  - The risk score should be less than 80 and reject otherwise
 - Reorganize/refactor the code to improve the structure & testability
+- Add at least one meaningful test
