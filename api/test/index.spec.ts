@@ -1,3 +1,4 @@
 test('is alive', () => {
-  expect(true).toBe(true);
+  const t: string = 'test';
+  expect(t).toBe(t);
 });
