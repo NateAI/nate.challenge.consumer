@@ -7,19 +7,19 @@ const port = 8080;
 const products = [
   {
     id: 1,
-    productUrl: "google.com",
-    productPrice: 799,
+    productUrl: "https://www.bedbathandbeyond.com/store/product/kate-spade-new-york-2-slice-toaster/5374432",
+    productPrice: 9499,
     discountCode: "FREE5FROMNATE"
   },
   {
     id: 2,
-    productUrl: "facebook.com",
-    productPrice: 3488
+    productUrl: "https://www.oculus.com/quest-2/",
+    productPrice: 29900
   },
   {
     id: 3,
-    productUrl: "apple.com",
-    productPrice: 80000,
+    productUrl: "https://www.apple.com/shop/product/MME73AM/A/airpods-3rd-generation",
+    productPrice: 17900,
     discountCode: "GIVEME50"
   }
 ];
