@@ -6,8 +6,8 @@ const getDelayedNumber = async (num: number): Promise<number> => {
   });
 };
 
-const getRiskScore = async (customerId: string): Promise<number> => {
-  console.log(`Getting risk score for customer ${customerId}`);
+const getRiskScore = async (paymentMethodId: string): Promise<number> => {
+  console.log(`Getting risk score for payment method ${paymentMethodId}`);
 
   const score = Math.floor(Math.random() * 100);
 

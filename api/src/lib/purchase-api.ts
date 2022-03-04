@@ -20,7 +20,7 @@ const getDelayedPurchaseStatus = async (status: PurchaseStatus): Promise<Purchas
   });
 };
 
-export const executePurchase = async (productId: number): Promise<PurchaseStatus> => {
+export const executePurchase = async (userId: string, productId: number, paymentMethodId: string): Promise<PurchaseStatus> => {
   console.log(`Executing purchase for product with ID ${productId}`);
 
   const status = getRandomPurchaseStatus();

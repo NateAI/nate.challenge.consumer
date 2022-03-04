@@ -1,7 +1,4 @@
-interface ProductPayment {
-};
-
-const assessRisk = async (payment: ProductPayment): Promise<boolean> => {
+const assessRisk = async (paymentMethodId: string): Promise<boolean> => {
   return true;
 };
 
