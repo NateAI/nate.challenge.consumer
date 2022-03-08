@@ -10,6 +10,8 @@ nate is a universal shopping experience that is designed to purchase any online 
 
 The challenge is different for full-stack and backend candidates.
 
+Before working on the challenge, please fork this repositoy. Add your solution to your fork.
+
 ### Backend
 
 * Create an endpoint in the API to purchase a product with a certain ID
