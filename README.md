@@ -16,7 +16,7 @@ Before working on the challenge, please fork this repositoy. Add your solution t
 
 - Create an endpoint in the API to purchase a product with a certain ID
   - Use `lib/purchase-api.ts` to execute a purchase
-- Design a risk assessment flow (see src/risk.ts) with provided `lib/risk-api.ts` functions and `lib/action-api.ts` actions
+- Design a risk assessment flow that would execute after a product has been purchased (see src/risk.ts) with provided `lib/risk-api.ts` functions and `lib/action-api.ts` actions
   - Assume that more than 1 missed payment should reject the purchase
   - The balance should cover the cost of the product and reject otherwise
   - The risk score should be less than 80 to accept, above 90 to reject, and anything in-between should be flagged
