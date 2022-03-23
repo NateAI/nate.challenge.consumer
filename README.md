@@ -2,6 +2,8 @@
 
 Technical challenge for Consumer Team engineering candidates
 
+Any questions during the duration of the challange can be sent to jason@nate.tech and oliver@nate.tech.
+
 ## Overview
 
 nate is a universal shopping experience that is designed to purchase any online product on behalf of a user.
@@ -74,8 +76,8 @@ When a risk assessment is performed, the possible outcomes are:
 - `api`: server application that allows callers to interact with nate's systems
   - `src`: source code for the server
     - `index.ts`: the server entrypoint
+    - `risk.ts`: source code for risk-related functionality
+    - `lib`: external libraries & APIs that provide useful functionality for the business - **note that these APIs are asynchronous and should not be modified**
       - `purchase-api.ts`: an interface for executing a purchase
       - `risk-api.ts`: a collection of interfaces for providing risk-related data about a user or payment method
       - `action-api.ts`: a collection of interfaces for accepting, rejecting, or flagging a purchase after risk assessment
-    - `risk.ts`: source code for risk-related functionality
-    - `lib`: external libraries & APIs that provide useful functionality for the business - **note that these APIs are asynchronous and should not be modified**
