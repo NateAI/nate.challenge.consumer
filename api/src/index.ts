@@ -1,5 +1,6 @@
 import cors from 'cors';
 import express, { Response } from 'express';
+import bodyParser from 'body-parser';
 
 const app = express();
 const port = 8080;
@@ -25,6 +26,7 @@ const products = [
 ];
 
 app.use(cors());
+app.use(bodyParser.json());
 
 app.get('/products', (_, res: Response) => {
   res.send(products)
