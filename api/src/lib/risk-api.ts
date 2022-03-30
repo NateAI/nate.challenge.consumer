@@ -9,9 +9,13 @@ const getDelayedNumber = async (num: number): Promise<number> => {
 const getRiskScore = async (paymentMethodId: string): Promise<number> => {
   console.log(`Getting risk score for payment method ${paymentMethodId}`);
 
-  const score = Math.floor(Math.random() * 100);
+  const possibleScores = [
+    ...Array.from(new Array(60), () => Math.floor(Math.random() * 80)),
+    ...Array.from(new Array(20), () => Math.floor(Math.random() * 90)),
+    ...Array.from(new Array(20), () => Math.floor(Math.random() * 100)),
+  ]
 
-  return getDelayedNumber(score);
+  return getDelayedNumber(possibleScores[Math.floor(Math.random() * possibleScores.length)]);
 };
 
 const getAccountBalance = async (userId: string): Promise<number> => {
@@ -26,9 +30,9 @@ const getAccountBalance = async (userId: string): Promise<number> => {
 const getNumMissedPayments = async (userId: string): Promise<number> => {
   console.log(`Getting number of missed payments for customer ${userId}`);
 
-  const numMissedPayments = Math.floor(Math.random() * 10);
+  const missedPayments = [0, 0, 0, 1, 5, 3, 0, 0, 0, 0, 20, 5]
 
-  return getDelayedNumber(numMissedPayments);
+  return getDelayedNumber(missedPayments[Math.floor(Math.random() * missedPayments.length)]);
 };
 
 export { getRiskScore, getAccountBalance, getNumMissedPayments };

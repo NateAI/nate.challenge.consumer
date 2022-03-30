@@ -8,10 +8,14 @@ export enum PurchaseStatus {
 }
 
 const getRandomPurchaseStatus = (): PurchaseStatus => {
-    const statuses = ['success', 'merchant-rejected', 'charge-failed', 'invalid-details'];
-    const status = statuses[Math.floor(Math.random() * 4)];
+    const statuses: PurchaseStatus[] = [
+      ...Array.from(new Array(50), () => PurchaseStatus.SUCCESS),
+      ...Array.from(new Array(5), () => PurchaseStatus.MERCHANT_REJECTED),
+      ...Array.from(new Array(5), () => PurchaseStatus.CHARGE_FAILED),
+      ...Array.from(new Array(5), () => PurchaseStatus.INVALID_DETAILS),
+    ]
 
-    return status as PurchaseStatus;
+    return statuses[Math.floor(Math.random() * statuses.length)];
 };
 
 const getDelayedPurchaseStatus = async (status: PurchaseStatus): Promise<PurchaseStatus> => {
