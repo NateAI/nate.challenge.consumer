@@ -2,7 +2,7 @@
 
 Technical challenge for Consumer Team engineering candidates
 
-Any questions during the duration of the challange can be sent to jason@nate.tech and oliver@nate.tech.
+If you have any questions during the challenge you can drop an email to the developer/s that introduced the challenge to you.
 
 ## Overview
 
@@ -55,11 +55,13 @@ A seamless purchase experience is a crucial part of our platform, and it involve
 
 - `purchaseId` (`string`): uniquely identifies a `Purchase`
 - `paymentMethodId` (`string`): a reference to a user's payment method they are using for the purchase
-- `status` (`success | merchant-rejected | charge-failed | invalid-details`): the status of a purchase in nate's systems
+- `status` (`success | merchant-rejected | charge-failed | invalid-details | pending | rejected`): the status of a purchase in nate's systems
   - `success`: indicates that the product was purchased successfully for the user
   - `merchant-rejected`: indicates that the merchant rejected this purchase because of issues on their end
   - `charge-failed`: indicates that the payment method was rejected when checking out
   - `invalid-details`: indicates that the details for the purchase are invalid
+  - `pending`: indicates that we have not yet started any process against the purchase
+  - `rejected`: indicates that we have rejected the purchase and will not complete it
 
 ### Risk Assessment
 
