@@ -2,7 +2,7 @@
 
 Technical challenge for Consumer Team engineering candidates
 
-Any questions during the duration of the challange can be sent to jason@nate.tech and oliver@nate.tech.
+If you have any questions during the challenge you can drop an email to the developer/s that introduced the challenge to you.
 
 ## Overview
 
