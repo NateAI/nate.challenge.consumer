@@ -1,0 +1,9 @@
+
+# Purchase product by id
+POST http://localhost:8080/purchase/1
+Content-Type: application/json
+
+{
+  "token": "{{uuid}}",
+  "userId": {{$randomInt}}
+}

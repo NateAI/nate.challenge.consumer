@@ -1,0 +1,11 @@
+
+# Get list of all products
+GET http://localhost:8080/products/
+
+###
+# Get product by id - 200
+GET http://localhost:8080/products/2
+
+###
+# Get product by id - 404
+GET http://localhost:8080/products/100
